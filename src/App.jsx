@@ -8,7 +8,7 @@ function App() {
   const jsxExpression = <strong>Lorenzo</strong>;
   return (
     <>
-      <Counter />
+      <Counter incremento={1} iniziale={0} intervallo={1000} />
     </>
   );
 }
