@@ -7,7 +7,7 @@ function App() {
   const jsxExpression = <strong>Lorenzo</strong>;
   return (
     <>
-      <Welcome name={jsxExpression} />
+      <Welcome name={jsxExpression} age={25} />
     </>
   );
 }
