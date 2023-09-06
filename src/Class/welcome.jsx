@@ -3,14 +3,12 @@ import Age from "./age";
 
 export default class Welcome extends React.Component {
   render() {
-    const { name, age } = this.props;
+    const { name } = this.props;
 
     return (
-      <div>
-        <p>Welcome {name}</p>
-
-        {age > 18 && age < 65 && name === "Jhon" ? <Age age={age} /> : false}
-      </div>
+      <p>
+        Welcome {name}, <Age age={25} />
+      </p>
     );
   }
 }
