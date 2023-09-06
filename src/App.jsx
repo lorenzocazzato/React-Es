@@ -1,12 +1,10 @@
 import "./App.css";
-import Hello from "./Class/Hello";
-import Message from "./Class/Message";
+import Welcome from "./Class/Welcome";
 
 function App() {
   return (
     <>
-      <Hello />
-      <Message />
+      <Welcome age={25} />
     </>
   );
 }
