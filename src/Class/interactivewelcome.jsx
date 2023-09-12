@@ -1,8 +1,9 @@
-import { isFileServingAllowed } from "vite";
+import React from "react";
+import Welcome from "./welcome";
 
 export default class InteractiveWelcome extends React.Component {
   state = {
-    nome: "",
+    nome: " ",
   };
 
   handleInput = (event) => {
@@ -12,8 +13,12 @@ export default class InteractiveWelcome extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" value={nome} onChange={this.handleInput} />
-        <Welcome2 name2={nome} />
+        <input
+          type="text"
+          value={this.state.nome}
+          onChange={this.handleInput}
+        />
+        <Welcome nome={this.state.nome} />
       </div>
     );
   }
