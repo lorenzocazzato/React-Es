@@ -1,14 +1,10 @@
 import "./App.css";
-import Login from "./Class/login";
+import UncontrolledLogin from "./Class/uncontrolledlogin";
 
 function App() {
-  const handleLogin = (login) => {
-    console.log(login);
-  };
-
   return (
     <>
-      <Login onLogin={handleLogin} />
+      <UncontrolledLogin />
     </>
   );
 }
