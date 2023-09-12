@@ -1,12 +1,14 @@
 import "./App.css";
-import InteractiveWelcome from "./Class/interactivewelcome";
+import Login from "./Class/login";
 
 function App() {
-  console.log();
+  const handleLogin = (login) => {
+    console.log(login);
+  };
 
   return (
     <>
-      <InteractiveWelcome />
+      <Login onLogin={handleLogin} />
     </>
   );
 }
