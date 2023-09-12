@@ -29,6 +29,10 @@ export default class UncontrolledLogin extends Component {
     this.setState({ isDisabled: !username || !password });
   };
 
+  componentDidMount() {
+    this.usernameInputRef.current.focus();
+  }
+
   render() {
     return (
       <div>
