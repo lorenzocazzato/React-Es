@@ -1,6 +1,7 @@
 import "./App.css";
 
 import ClickTracker from "./Class/clicktracker";
+import InteractiveWelcome from "./Class/interactivewelcome";
 
 function App() {
   const jsxExpression = <strong>Lorenzo</strong>;
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <>
-      <ClickTracker />
+      <InteractiveWelcome />
     </>
   );
 }
