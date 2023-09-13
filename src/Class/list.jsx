@@ -16,7 +16,7 @@ export default class TodoList extends React.Component {
   handleButtonClick = (event) => {
     let { items, inputValue } = this.state;
     const updatedItems = [...items, inputValue];
-    this.setState({ items: updatedItems });
+    this.setState({ items: updatedItems, inputValue: "" });
   };
 
   render() {
