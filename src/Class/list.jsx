@@ -18,7 +18,9 @@ export default class TodoList extends React.Component {
     const updatedItems = [...items, inputValue];
     this.setState({ items: updatedItems, inputValue: "" });
   };
-
+  handleReset = () => {
+    this.setState({ items: [] });
+  };
   render() {
     const { inputValue } = this.state;
     return (
@@ -34,6 +36,7 @@ export default class TodoList extends React.Component {
           value={inputValue}
           onChange={this.handleInputChange}
         />
+        <button onClick={this.handleReset}>Reset</button>
       </div>
     );
   }
