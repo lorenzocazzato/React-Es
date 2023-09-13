@@ -18,28 +18,23 @@ export default class TodoList extends React.Component {
     const updatedItems = [...items, inputValue];
     this.setState({ items: updatedItems, inputValue: "" });
   };
+
+  handleRemove = (indexToRemove) => {
+    const updatedItems = [...this.state.items];
+    updatedItems.splice(indexToRemove, 1);
+    this.setState({ items: updatedItems });
+  };
+
   handleReset = () => {
     this.setState({ items: [] });
-  };
-  handleRemove = (indexToRemove) => {
-    const newItems = [...this.state.items];
-    newItems.splice(indexToRemove, 1);
-    this.setState({ items: newItems });
   };
 
   render() {
     const { inputValue } = this.state;
     return (
       <div>
-        <ul>
-          {this.state.items.map((item, index) => (
-            <li key={index}>
-              {item}
-              <button onClick={() => this.handleRemove(index)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-        <button onClick={this.handleButtonClick}>Add</button>
+        {this.props.render(this.state.items, this.handleRemove)}
+        <button onClick={this.handleButtonClick}>GO</button>
         <input
           type="text"
           value={inputValue}

@@ -1,12 +1,22 @@
-import "./App.css";
+import React from "react";
 import TodoList from "./Class/list";
-import UncontrolledLogin from "./Class/uncontrolledlogin";
 
 function App() {
   return (
-    <>
-      <TodoList />
-    </>
+    <div>
+      <TodoList
+        render={(items, handleRemove) => (
+          <ul>
+            {items.map((item, index) => (
+              <li key={index}>
+                {item}
+                <button onClick={() => handleRemove(index)}>Remove</button>
+              </li>
+            ))}
+          </ul>
+        )}
+      />
+    </div>
   );
 }
 
