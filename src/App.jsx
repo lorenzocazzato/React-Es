@@ -1,10 +1,11 @@
 import React from "react";
-import LanguageSelector from "./Class/languagecontext";
+
+import ClickCounter from "./Functions/cliccounter";
 
 function App() {
   return (
     <div>
-      <LanguageSelector />
+      <ClickCounter />
     </div>
   );
 }
