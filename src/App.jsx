@@ -2,6 +2,7 @@ import React from "react";
 import ClickCounter from "./Functions/cliccounter";
 import { Counter } from "./Functions/counter";
 import { GithubUser } from "./Functions/githubuser";
+import { GithubUserList } from "./Functions/githubuserlist";
 
 import Login from "./Functions/login";
 
@@ -11,7 +12,7 @@ const handleCounterChange = (counter) => {
 function App() {
   return (
     <div>
-      <GithubUser username="lorenzocazzato" />
+      <GithubUserList />
     </div>
   );
 }
