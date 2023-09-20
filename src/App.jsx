@@ -12,7 +12,7 @@ const handleCounterChange = (counter) => {
 function App() {
   return (
     <div>
-      <GithubUserList />
+      <Counter />
     </div>
   );
 }
