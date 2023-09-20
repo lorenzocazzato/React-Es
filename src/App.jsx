@@ -1,11 +1,11 @@
 import React from "react";
 
-import ClickCounter from "./Functions/cliccounter";
+import Login from "./Functions/login";
 
 function App() {
   return (
     <div>
-      <ClickCounter />
+      <Login />
     </div>
   );
 }
