@@ -1,10 +1,11 @@
 import React from "react";
+import { GithubUser } from "./Functions/githubuser";
 import { Form } from "./Functions/useForm";
 
 function App() {
   return (
     <div>
-      <Form />
+      <GithubUser username={"lorenzocazzato"} />
     </div>
   );
 }
