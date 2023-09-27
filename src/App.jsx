@@ -1,13 +1,16 @@
-import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { DisplayLanguage } from "./Functions/displaylanguage";
-import { FilteredList } from "./Functions/filteredlist";
+import { Counter } from "./Functions/counter";
 
 function App() {
   return (
-    <div>
-      <FilteredList />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/counter" element={<Counter />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
