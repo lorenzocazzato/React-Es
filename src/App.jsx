@@ -16,6 +16,7 @@ function App() {
           />
 
           <Route path="users/:username" element={<ShowGitUser />} />
+          <Route path="*" element={<p>Not found</p>} />
         </Routes>
       </div>
     </BrowserRouter>
