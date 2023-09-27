@@ -6,6 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <div>
+        <Link to="/">Home</Link>|<Link to="/counter">Counter</Link>|
+        <Link to="users/lorenzocazzato">Vai al nome</Link>
         <Routes>
           <Route path="/counter" element={<Counter />} />
           <Route
@@ -19,5 +21,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;
